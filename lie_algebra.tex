@@ -54,6 +54,8 @@
 
 \renewcommand{\qedsymbol}{$\blacksquare$}
 
+\DeclareMathOperator{\charac}{char}
+
 
 \makeatletter
 \renewenvironment{proof}[1][Proof.\\]{\par
@@ -73,9 +75,31 @@
 \begin{document}
 \maketitle
 \newpage
-\tableofcontents
-\newpage
+%\tableofcontents
+%\newpage
+%Section 1
+%\section{Вступ до алгебри Лі}
+\subsection{Означення}
 \begin{definition}
-Нульове означення
+\textbf{Алгеброю Лі} назвемо векторний простір $L$ над полем $F$ разом з білінійною формою $[\cdot,\cdot] \colon L \times L \to L$, що задовольняє таким умовам:
+\begin{align*}
+\begin{tabular}{ll}
+1) & $\forall x \in L: [x,x] = 0$ \\
+2) & $\forall x,y,z \in L: [x,[y,z]] + [y,[z,x]] + [z,[x,y]] = 0$
+\end{tabular}
+\end{align*}
+Остання рівність схожа на \textbf{тотожність Якобі} із аналітичної геометрії.
 \end{definition}
+
+\begin{proposition}
+$\forall x \in L: [x,x] = 0 \iff \forall x,y \in L: [y,x] = -[x,y]$.\\
+За умовою, що $\charac(F) \neq 2$.\\
+\textit{Вправа: довести.}
+\end{proposition}
+
+\begin{proof}
+\rightproof Дано: $[x,x] = 0$ для всіх $x \in L$. Оберемо довільні $x,y \in L$, тоді звідси $[x+y,x+y] = 0$ за умовою. Зокрема за властивістю білінійної форми, $[x,x] + [x,y] + [y,x] + [y,y] = 0$. Таким чином, $[y,x] = -[x,y]$.
+\bigskip \\
+\leftproof Дано: $[y,x] = -[x,y]$ для всіх $x,y \in L$. Зокрема якщо $y = x$, то звідси $[x,x] = -[x,x]$. Таким чином, $2[x,x] = 0$, але оскільки $\charac(F) \neq 2$, то ми отримаємо $[x,x] = 0$.
+\end{proof}
 \end{document}
