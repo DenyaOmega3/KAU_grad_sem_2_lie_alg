@@ -139,4 +139,39 @@ $[A,[B,C]] + [B,[C,A]] + [C,[A,B]] = [A, BC-CB] + [B, CA-AC] + [C, AB-BA] = \\ =
 \end{align*}
 Це схоже на означення ідеала в кільці. Коротко можна записати як $[I,L] \subset I$. Оскільки нам відомо, що $[x,y] = -[y,x]$ (при $\charac F \neq 2$), то нам не обов'язково визначати так звані ліві та праві ідеали.
 \end{definition}
+
+\begin{example}
+Розглянемо множину $\mathfrak{sl}(F) = \{ A \in \mathfrak{gl}(F) \mid \tr(A) = 0\}$. Цілком зрозуміло, що $\mathfrak{sl}(F)$ буде підпростором векторного простору $\mathfrak{gl}(F)$. Але до того ж $\mathfrak{sl}(F)$ -- підалгебра Лі.\\
+Дійсно, нехай $A,B \in \mathfrak{sl}(F)$. Ми хочемо $[A,B] \in \mathfrak{sl}(F)$, тобто $AB - BA \in \mathfrak{sl}(F)$, для цього перевіримо слід цієї матриці. Справді,\\
+$\tr(AB - BA) = \tr(AB) + \tr(-BA) = \tr(AB) - \tr(BA) = \tr(AB) - \tr(AB) = 0$.\\
+Зазначу хіба що: $\tr(AB) = \tr(BA)$ легітимна рівність, бо все одно ми множимо матриці однієї розмірності.
+\end{example}
+
+\begin{example}
+$\mathfrak{sl}_n(F)$ -- ідеал $\mathfrak{gl}_n(F)$.
+\end{example}
+
+\begin{example}
+$\mathfrak{b}_n(F)$ -- множина верхньотрикутних матриць -- теж підалгебра Лі $\mathfrak{gl}_n(F)$. При цьому при $n \geq 2$ простір $\mathfrak{b}_n(F)$ не буде ідеалом $\mathfrak{gl}_n(F)$.\\
+Оберемо дві матриці $A = \begin{pmatrix}
+1 & 0 & \dots & 0 \\
+0 & 0 & \dots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \dots & 0
+\end{pmatrix} \in \mathfrak{b}_2(F)$ та $B = \begin{pmatrix}
+0 & 0 & \dots & 0 \\
+0 & 0 & \dots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+1 & 1 & \dots & 1
+\end{pmatrix} \in \mathfrak{gl}_2(F)$. Якщо взяти їхню білінійну форму, отримаємо $[A,B] = \begin{pmatrix}
+0 & 0 & \dots & 0 \\
+0 & 0 & \dots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+-1 & 0 & \dots & 0
+\end{pmatrix} \notin \mathfrak{b}_n(F)$.
+\end{example}
+
+\begin{example}
+$\mathfrak{n}_n(F)$ -- множина строго верхньотрикутних матриць (тобто коли на головній діагоналі елементи нулеві) -- ідеал $\mathfrak{b}_n(F)$.
+\end{example}
 \end{document}
