@@ -1,0 +1,81 @@
+\documentclass[a4paper, 10pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsfonts, amsmath, amssymb, amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[english, main=ukrainian]{babel}
+\usepackage{pgfplots}
+\usepackage{bm}
+\usepackage{physics}
+\usepackage[unicode]{hyperref}
+\usepackage{tikz-cd}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\usepackage{pdfpages}
+\usepackage{caption}
+\usepackage{float}
+
+\usepgfplotslibrary{fillbetween}
+
+\usetikzlibrary{spy}
+\usetikzlibrary{fit,matrix}
+
+\def\rightproof{$\boxed{\Rightarrow}$ }
+
+\def\leftproof{$\boxed{\Leftarrow}$ }
+
+\newtheoremstyle{theoremdd}
+  {\topsep}
+  {\topsep}
+  {\normalfont}
+  {0pt}
+  {\bfseries}
+  {}
+  { }
+  {\thmname{#1}\thmnumber{ #2}\textnormal{\thmnote{ \textbf{#3}\\}}}
+
+\theoremstyle{theoremdd}
+\newtheorem{theorem}{Theorem}[subsection]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\newcommand\thref[1]{\textbf{Th.~\ref{#1}}}
+\newcommand\defref[1]{\textbf{Def.~\ref{#1}}}
+\newcommand\exref[1]{\textbf{Ex.~\ref{#1}}}
+\newcommand\prpref[1]{\textbf{Prp.~\ref{#1}}}
+\newcommand\rmref[1]{\textbf{Rm.~\ref{#1}}}
+\newcommand\lmref[1]{\textbf{Lm.~\ref{#1}}}
+\newcommand\crlref[1]{\textbf{Crl.~\ref{#1}}}
+
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+
+\makeatletter
+\renewenvironment{proof}[1][Proof.\\]{\par
+\pushQED{\hfill \qed}%
+\normalfont \topsep6\p@\@plus6\p@\relax
+\trivlist
+\item\relax
+{\bfseries
+#1\@addpunct{.}}\hspace\labelsep\ignorespaces
+}{%
+\popQED\endtrivlist\@endpefalse
+}
+\makeatother
+
+\title{Алгебра Лі \\ І курс магістратура, 2 семестр}
+    	
+\begin{document}
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+\begin{definition}
+Нульове означення
+\end{definition}
+\end{document}
